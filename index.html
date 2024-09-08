@@ -38,8 +38,8 @@
       //var WebSecketServer = "ws://10.21.43.203:8501";
 
       //--Staging Server------------------------------
-      var APIServer = "https://10.21.43.203:8500/api/v1";
-      var WebSecketServer = "ws://10.21.43.203:8501";
+      var APIServer = "https://10.21.43.203:8700/api/v1";
+      var WebSecketServer = "ws://10.21.43.203:8701";
 
       var ConcurrentCall = [];
       var connectSocket = false;
@@ -425,7 +425,7 @@
             success: function (response) {
               console.log("Status updated successfully:", response);
               $.ajax({
-                url: "https://10.21.43.203:8505/api/functions/postOnlineAgentListByTeam",
+                url: "https://10.21.43.203:8705/api/functions/postOnlineAgentListByTeam",
                 type: "post",
 
                 contentType: "application/json",
@@ -437,7 +437,7 @@
                 data: JSON.stringify({
                   AgentCode: $("#agent").val(),
                   AgentName: "test agent", 
-                  Queue: 5, // ใส่ TeamCode ที่ต้องการ
+                  Queue: 7, // ใส่ TeamCode ที่ต้องการ
                   AgentStatus: agentStatusValue, // ใช้ค่า agentStatusValue จากการเลือกสถานะ
                   AgentStatusCode: "5",
                   IsLogin :1,
